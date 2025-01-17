@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+
+<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- ▼IEでメディアクエリを有効にする際、IEの最新の仕様でレンダリングさせる -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>四柱推命LP</title>
+<style>
+body{
+	background: #2b2b2b;
+	color:#fff;
+	-webkit-text-size-adjust: 100%;
+}
+#wrapp{
+	width:100%;
+	position:relative;
+	overflow:hidden;
+}
+.enter{
+	position: absolute;
+    top: 72%;
+    left: 15vw;
+    width: 70%;
+	z-index: 100;
+}
+.atn01{
+    position: absolute;
+    font-size: 10px;
+    font-weight: 600;
+    color: #335655;
+    top: 0.5%;
+    right: 0.5%;
+    text-shadow: 0px 0px 1px #fff, 0px 0px 1px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff;
+}
+.atn02{
+	position: absolute;
+    top: 93%;
+    left: 18vw;
+}
+.atn02 p{
+	font-size: 3vw;
+    font-weight: 600;
+    color: #578987;
+    text-align: center;
+    text-shadow: 0px 0px 2px #ffffff, 0px 0px 2px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 5px #ffffff, 0px 0px 5px #ffffff, 0px 0px 5px #ffffff;
+}
+/*== 運勢オーブcss ==*/
+.group02, .group03{
+	opacity:0;
+}
+.orb_1, .orb_3, .orb_5{
+	position: absolute;
+    width: 47%;
+    top: 44%;
+    left: 11vw;
+    z-index: 50;
+}
+.orb_2, .orb_4, .orb_6{
+	position: absolute;
+    width: 50%;
+    top: 46%;
+    left: 43vw;
+    z-index: 50;
+}
+.fuwafuwa {
+  animation: 5s fuwafuwa_anim infinite;
+}
+@keyframes fuwafuwa_anim {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3%);
+  }
+}
+/*== 鳥css ==*/
+.bird{
+	width: 35%;
+    position: absolute;
+    top: 60vw;
+    right: 1vw;
+    transform: rotateY(180deg);
+	}
+/*== 右へ向く ==*/
+.facingLeft{
+	transform: rotateY(180deg);
+	}
+.turnLeft{
+	animation-name: turn_Left;
+	animation-fill-mode:forwards;
+	animation-delay: 0s;
+	animation-duration: .5s;
+	animation-timing-function: ease;
+	}
+@keyframes turn_Left{
+	0%{
+		transform: rotateY(0deg);
+	}
+	100%{
+		transform: rotateY(180deg);
+	}
+}
+/*== 左へ向く ==*/
+.facingRight{
+	transform: rotateY(0deg);
+	}
+.turnRight{
+	animation-name: turn_Right;
+	animation-fill-mode:forwards;
+	animation-delay: 0s;
+	animation-duration: .5s;
+	animation-timing-function: ease;
+	}
+@keyframes turn_Right{
+	0%{
+		transform: rotateY(180deg);
+	}
+	100%{
+		transform: rotateY(0deg);
+	}
+}
+/*== 鳥cssここまで ==*/
+/*footer*/
+footer {
+	text-align: center;
+    max-width: 640px;
+    margin: auto;
+    border-top: 1px dashed #999;
+    background: #003740;
+}
+footer .helpBtn {
+    padding: 10% 0 5%;
+}
+footer .helpBtn a {
+    width: 30%;
+    margin: auto;
+    padding: 3% 7%;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+}
+footer .helpBtn a::after {
+    color: #fff;
+    content: "▲";
+    display: inline-block;
+    margin: 0 -3px 0 5px;
+    transform: rotate(90deg);
+}
+/* letter service */
+.contents{
+	background:#001411;
+	color: #fff;
+}
+.contents h2{
+	padding: 10px 0;
+	background: -webkit-linear-gradient(to bottom, #1f4c4a, transparent);
+	background: linear-gradient(to bottom, #1f4c4a, transparent);
+	border-top: 3px solid #717c6a;
+	font-size: 20px;
+	font-family: serif;
+	text-align: center;
+}
+.contents img{
+	width: 90%;
+	margin: 0 5%;
+}
+.contents .letterTxt{
+	width: 90%;
+	margin: auto;
+	padding: 3%;
+}
+.contents .letterTxt p{
+	line-height:1.2;
+	margin:3% auto;
+}
+.contents .letterTxt p:first-of-type{
+	font-size: 13px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div id="wrapp">
+	<p class="atn01">提供会社名</p>
+	<img src="./img/00_bgTop.jpg" width="100%" alt="背景画像" class="bg">
+	<div class="bird">
+		<img src="./img/99_bird_stop.png" width="100%" alt="背景画像" class="bg">
+	</div>
+	<div class="anim_fuwafuwa">
+		<div class="group01">
+			<img src="./img/00_orb01.png" width="100%" alt="恋愛運" class="orb_1 fuwafuwa">
+			<img src="./img/00_orb02.png" width="100%" alt="金運" class="orb_2 fuwafuwa">
+		</div>
+		<div class="group02">
+			<img src="./img/00_orb03.png" width="100%" alt="運命" class="orb_3 fuwafuwa">
+			<img src="./img/00_orb04.png" width="100%" alt="転機" class="orb_4 fuwafuwa">
+		</div>
+		<div class="group03">
+			<img src="./img/00_orb05.png" width="100%" alt="仕事運" class="orb_5 fuwafuwa">
+			<img src="./img/00_orb06.png" width="100%" alt="総合運" class="orb_6 fuwafuwa">
+		</div>
+	</div>
+	<div class="enter">
+		<a href="">
+			<img src="./img/09_enterBtn.png" width="100%" alt="占ってみる">
+		</a>
+	</div>
+	<div class="atn02">
+		<p>※占いの結果を保証するものではありません</p>
+		<p>※サイト内の一部に有料コンテンツを含みます</p>
+	</div>
+</div>
+<footer>
+	<p class="helpBtn"><small><a href="">ヘルプ</a></small></p>
+	<small>Copyright  2023 companyname</small>
+</footer>
+
+<script>
+//ブラウザバック時にキャッシュを残さない
+window.onunload = function() {};
+window.onpageshow = function(evt) {
+	if (evt.persisted) {
+	  location.reload();
+	}
+};
+</script>
+
+<script>
+/* main */
+var OrbGroup = 1;/* オーブグループ番号 */
+
+$(window).on('load',function(){
+	birdAnim(); /* 最初に鳥アニメ一回呼び出し */
+	Orb();
+	setInterval(function(){
+		birdAnim();
+	},10000);
+});
+
+function birdAnim(){
+	/*  一往復  */
+	setTimeout(function(){
+			moveLeft();/* 画面左下に移動 */
+	},3000);
+	setTimeout(function(){
+			moveRight();/* 画面右上に移動 */
+	},8000);
+};
+function moveRight(){
+	/* アニメーションにランダム性 */
+	var randomActionR = Math.ceil(Math.random()*3);
+	/* 画面右側へ動くアニメーション */
+	if(randomActionR === 1){
+		$('.bird img').attr('src', './img/99_bird_flying.gif');/* 羽ばたいている画像に切り替え */
+		$(".bird").animate({
+			marginTop:'0vw',
+			marginRight:'0vw'/* 元の場所にもどる */
+		},1500);
+		setTimeout(function(){
+			$(".bird").addClass("turnLeft");/* 鳥の向き切り替え */
+			$(".bird").removeClass("facingRight");
+		},1500);
+		setTimeout(function(){
+			$(".bird").removeClass("turnLeft");
+			$(".bird").addClass("facingLeft");/* 鳥の向きを固定 */
+			$('.bird img').attr('src', './img/99_bird_stop.png');
+		},2000);
+	}
+	if(randomActionR === 2){
+		$('.bird img').attr('src', './img/99_bird_groom02.gif');
+		setTimeout(function(){
+			$('.bird img').attr('src', './img/99_bird_flying.gif');/* 羽ばたいている画像に切り替え */
+			$(".bird").animate({
+				marginTop:'0vw',
+				marginRight:'0vw'/* 元の場所にもどる */
+			},1200);
+		},300);
+		setTimeout(function(){
+			$(".bird").addClass("turnLeft");/* 鳥の向き切り替え */
+			$(".bird").removeClass("facingRight");
+		},1500);
+		setTimeout(function(){
+			$(".bird").removeClass("turnLeft");
+			$(".bird").addClass("facingLeft");/* 鳥の向きを固定 */
+			$('.bird img').attr('src', './img/99_bird_stop.png');
+		},2000);
+	}
+	if(randomActionR === 3){
+		$('.bird img').attr('src', './img/99_bird_groom01.gif');
+		setTimeout(function(){
+			$('.bird img').attr('src', './img/99_bird_groom02.gif');
+		},300);
+		setTimeout(function(){
+			$('.bird img').attr('src', './img/99_bird_flying.gif');/* 羽ばたいている画像に切り替え */
+			$(".bird").animate({
+				marginTop:'0vw',
+				marginRight:'0vw'/* 元の場所にもどる */
+			},1000);
+		},500);
+		setTimeout(function(){
+			$(".bird").addClass("turnLeft");/* 鳥の向き切り替え */
+			$(".bird").removeClass("facingRight");
+		},1600);
+		setTimeout(function(){
+			$(".bird").removeClass("turnLeft");
+			$(".bird").addClass("facingLeft");/* 鳥の向きを固定 */
+			$('.bird img').attr('src', './img/99_bird_stop.png');
+		},2000);
+	}
+};
+function moveLeft(){
+	/* アニメーションにランダム性 */
+	var randomActionL = Math.ceil(Math.random()*3);
+	/* 画面左側へ動くアニメーション */
+	if( randomActionL === 1){
+		$('.bird img').attr('src', './img/99_bird_flying.gif');
+		$(".bird").animate({
+			marginTop:'33vw',
+			marginRight:'70vw'/* 左下に移動 */
+		},1500);
+		setTimeout(function(){
+			$(".bird").addClass("turnRight");
+		},1500);
+		setTimeout(function(){
+			$(".bird").removeClass("turnRight");
+			$(".bird").addClass("facingRight");
+			$('.bird img').attr('src', './img/99_bird_stop.png');
+		},2000);
+	}
+	if( randomActionL === 2){
+		$('.bird img').attr('src', './img/99_bird_groom02.gif');
+		setTimeout(function(){
+			$('.bird img').attr('src', './img/99_bird_flying.gif');
+			$(".bird").animate({
+				marginTop:'33vw',
+				marginRight:'70vw'/* 左下に移動 */
+			},1000);
+		},700);
+		setTimeout(function(){
+			$(".bird").addClass("turnRight");
+		},1700);
+		setTimeout(function(){
+			$(".bird").removeClass("turnRight");
+			$(".bird").addClass("facingRight");
+			$('.bird img').attr('src', './img/99_bird_stop.png');
+		},2000);
+	}
+	if( randomActionL === 3){
+		$('.bird img').attr('src', './img/99_bird_groom02.gif');
+		setTimeout(function(){
+			$('.bird img').attr('src', './img/99_bird_groom01.gif');
+		},200);
+		setTimeout(function(){
+			$('.bird img').attr('src', './img/99_bird_flying.gif');
+			$(".bird").animate({
+				marginTop:'33vw',
+				marginRight:'70vw'/* 左下に移動 */
+			},1000);
+		},500);
+		setTimeout(function(){
+			$(".bird").addClass("turnRight");
+		},1500);
+		setTimeout(function(){
+			$(".bird").removeClass("turnRight");
+			$(".bird").addClass("facingRight");
+			$('.bird img').attr('src', './img/99_bird_stop.png');
+		},2000);
+	}
+};
+
+/* オーブの切り替わり */
+function Orb(){
+	setInterval(function(){
+		if(OrbGroup === 1){
+			$(".group01").animate({opacity:0},1000);
+			$(".group02").animate({opacity:1},1000);
+			OrbGroup += 1;
+		}
+		else if(OrbGroup === 2){
+			$(".group02").animate({opacity:0},1000);
+			$(".group03").animate({opacity:1},1000);
+			OrbGroup += 1;
+		}
+		else if(OrbGroup === 3){
+			$(".group03").animate({opacity:0},1000);
+			$(".group01").animate({opacity:1},1000);
+			OrbGroup = 1;
+		}
+	},5000);
+}
+</script>
+</body>
+</html>
