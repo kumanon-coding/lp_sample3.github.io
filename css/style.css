@@ -1,0 +1,334 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  font: 16px/1.6 Arial, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  color: #000;
+  font-size: 21px;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+textarea {
+  color: #000;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.text_link {
+  color: #1b7fe5;
+  text-decoration: underline;
+}
+
+.attention {
+  color: #b92039;
+}
+
+.err_message {
+  color: #b92039;
+  text-align: center;
+}
+
+/*--------------------------------------
+	▼ スタイル
+--------------------------------------*/
+
+.margin_top_none {
+  margin-top: 0 !important;
+}
+
+.margin_top_s {
+  margin-top: 5px !important;
+}
+
+.margin_top_m {
+  margin-top: 10px !important;
+}
+
+.margin_top_l {
+  margin-top: 15px !important;
+}
+
+.margin_right_s {
+  margin-right: 5px !important;
+}
+
+.margin_right_m {
+  margin-right: 10px !important;
+}
+
+.margin_right_l {
+  margin-right: 15px !important;
+}
+
+.margin_bottom_none {
+  margin-bottom: 0 !important;
+}
+
+.margin_bottom_s {
+  margin-bottom: 5px !important;
+}
+
+.margin_bottom_m {
+  margin-bottom: 10px !important;
+}
+
+.margin_bottom_l {
+  margin-bottom: 15px !important;
+}
+
+.margin_left_s {
+  margin-left: 5px !important;
+}
+
+.margin_left_m {
+  margin-left: 10px !important;
+}
+
+.margin_left_l {
+  margin-left: 15px !important;
+}
+
+.display_block {
+  display: block;
+}
+
+.display_inline_block {
+  display: inline-block;
+}
+
+.display_none {
+  display: none;
+}
+
+.line_height_none {
+  line-height: 1;
+}
+
+.line_height_s {
+  line-height: 1.2;
+}
+
+.line_height_m {
+  line-height: 1.5;
+}
+
+.line_height_l {
+  line-height: 2;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.break_all {
+  word-break: break-all;
+}
+
+.under_line {
+  text-decoration: underline;
+}
+
+/*--------------------------------------
+	▼ テキストサイズ
+--------------------------------------*/
+
+.text10 {
+  font-size: 77%;
+}
+
+.text11 {
+  font-size: 85%;
+}
+
+.text12 {
+  font-size: 93%;
+}
+
+.text13 {
+  font-size: 100%;
+}
+
+.text14 {
+  font-size: 108%;
+}
+
+.text15 {
+  font-size: 116%;
+}
+
+.text16 {
+  font-size: 123.1%;
+}
+
+.text17 {
+  font-size: 131%;
+}
+
+.text18 {
+  font-size: 138.5%;
+}
+
+.text19 {
+  font-size: 146.5%;
+}
+
+.text20 {
+  font-size: 153.9%;
+}
+
+.text_normal {
+  font-weight: normal;
+}
+
+.text_bold {
+  font-weight: bold;
+}
+
+/*--------------------------------------
+	▼ テキスト位置
+--------------------------------------*/
+
+.text_left {
+  text-align: left;
+}
+
+.text_center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text_right {
+  text-align: right;
+}
+
+/*--------------------------------------
+	▼ テキスト色
+--------------------------------------*/
+
+.text_white {
+  color: #ffffff !important;
+}
+
+.text_yellow {
+  color: #ffae00 !important;
+}
+
+.text_red {
+  color: #ff2e2e !important;
+}
+
+.text_blue {
+  color: #009cff !important;
+}
+
+.text_black {
+  color: #222222 !important;
+}
+
+/*--------------------------------------
+	▼ 共通フッター（#footerCommon#）
+--------------------------------------*/
+
+footer.footerCommon {
+  width: 100%;
+  padding: 2% 2% 5%;
+  background: #f2f2f2;
+  color: #555;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+footer.footerCommon ul {
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  overflow: hidden;
+  list-style: none;
+}
+
+footer.footerCommon ul li {
+  display: list-item;
+  width: 48%;
+  margin: 1%;
+  padding: 1.5% 1%;
+  background: #ddd;
+  border: 0;
+  border-radius: 2px;
+  font-size: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+}
+
+footer.footerCommon ul li a {
+  color: #555;
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+footer.footerCommon p {
+  color: #999;
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/*--------------------------------------
+	▼　オプトインcss
+--------------------------------------*/
+
+.check_dark {
+  color: #fff;
+}
+
+.check_light {
+  color: #222;
+}
+
+.check_warp {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.check_txtbox {
+  width: 100%;
+  margin: 0.5rem auto;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.optin_checkbox {
+  margin: auto;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.optin_checkbox input {
+  -webkit-appearance: checkbox;
+}
+
+.optin_off {
+  filter: grayscale(100%) !important;
+  pointer-events: none;
+}
